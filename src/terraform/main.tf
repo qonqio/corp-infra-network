@@ -23,3 +23,8 @@ resource "azurerm_resource_group" "main" {
   tags     = local.all_tags
 
 }
+
+import {
+  to = module.vpn.azurerm_point_to_site_vpn_gateway.main
+  id = "/subscriptions/9db8d5ac-a7c8-4882-9720-d0c3424699d7/resourceGroups/rg-qonq-vwan-prod/providers/Microsoft.Network/p2sVpnGateways/vpng-qonq-vwan-prod"
+}
