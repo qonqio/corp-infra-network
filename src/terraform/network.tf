@@ -17,7 +17,7 @@ module "vwan" {
   resource_group_name    = azurerm_resource_group.main.name
   location               = azurerm_resource_group.main.location
   name                   = "${var.application_name}-${var.environment_name}"
-  primary_address_prefix = var.base_address_space
+  primary_address_space  = var.base_address_space
   additional_regions     = var.additional_regions
 
 }
