@@ -9,11 +9,6 @@ locals {
   azure_vpn_app_id = data.azuread_application_published_app_ids.well_known.result["AzureVPN"]
 }
 
-resource "azurerm_resource_group" "main" {
-  name     = "rg-"${var.application_name}-${var.environment_name}""
-  location = var.location
-}
-
 module "vwan" {
 
   source  = "Azure-Terraformer/vwan/azurerm"
